@@ -10,7 +10,8 @@ const { authenticateToken } = require('./utilities')
 const Note = require('./models/noteModel')
 app.use(express.json())
 app.use(cors({
-    origin: "*",
+    origin: "https://notes-seven-tawny.vercel.app/",
+    methods: ["GET", "POST", "PUT", "DELETE"],
 }))
 
 app.get("/", (req, res) => {
