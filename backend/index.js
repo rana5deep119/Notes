@@ -108,8 +108,6 @@ app.post('/add-note', authenticateToken, async (req, res) => {
     const { title, content, tags } = req.body;
     const user = req.user.user;
 
-
-
     if (!title) {
         return res.status(400).json({ error: true, message: "title is required" })
     }
